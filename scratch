@@ -1,3 +1,4 @@
+--- code to place in main.js file ---
 function fetchIssues () {
   var issues = JSON.parse(localStorage.getItem('issues'));
   console.log('issues: ', issues);
@@ -101,12 +102,22 @@ function deleteIssue (id) {
 }
 
 
+
+
+--- add onload event to body tag on line 13 ---
+  onload="fetchIssues()"
+
+--- add id to div on line 14 ---
+  id='topLevel'
+
+--- add script tags below at line 56 on index.html ---
     <script src="main.js"></script>
 
     <script>
       const form = document.getElementById("issueInputForm");
       form.addEventListener('submit', saveIssue)
     </script>
+
 
     <script>
       const newDiv = document.createElement('div');
